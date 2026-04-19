@@ -2,13 +2,13 @@
    VARIABLES & THEME
    ========================================= */
    :root {
-    /* Colors (Dark Navy / Cyan Theme) */
-    --bg-navy: #0a101f;        /* Very dark blue, almost black */
-    --bg-light-navy: #112035;  /* Lighter navy for cards */
-    --bg-lighter: #1e314b;     /* Lightest element background */
-    --cyan: #06b6d4;           /* Primary highlight */
-    --light-blue: #38bdf8;     /* Secondary highlight */
-    --text-main: #e2e8f0;      /* Slate 200 */
+    /* Colors (Slate / Emerald Theme) */
+    --bg-navy: #0f172a;        /* Deep Slate 900 */
+    --bg-light-navy: #1e293b;  /* Lighter Slate 800 for cards */
+    --bg-lighter: #334155;     /* Lightest Slate 700 */
+    --cyan: #10b981;           /* Primary highlight - Emerald green */
+    --light-blue: #34d399;     /* Secondary highlight - Emerald */
+    --text-main: #f8fafc;      /* Slate 50 */
     --text-muted: #94a3b8;     /* Slate 400 */
     
     /* Typography */
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5 {
     top: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(10, 16, 31, 0.85);
+    background-color: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(10px);
     z-index: 100;
     transition: var(--transition);
@@ -407,6 +407,59 @@ h1, h2, h3, h4, h5 {
     left: 0;
     color: var(--cyan);
     font-family: monospace;
+}
+
+/* =========================================
+   PARCOURS SECTION (TIMELINE)
+   ========================================= */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 2px solid var(--bg-lighter);
+}
+.timeline-item {
+    position: relative;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-dot {
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--cyan);
+    border: 4px solid var(--bg-navy);
+}
+.timeline-content {
+    background-color: var(--bg-light-navy);
+    padding: 20px 25px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+.timeline-content h3 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 1.25rem;
+}
+.timeline-date {
+    color: var(--cyan);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+.timeline-content p:last-child {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* =========================================
